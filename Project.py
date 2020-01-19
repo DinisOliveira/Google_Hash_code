@@ -1,6 +1,6 @@
 from itertools import combinations
 
-f = open("a_example (1).in")
+f = open("a_example.in")
 line_1 = f.readline()
 line_2 = f.readline()
 M = int(line_1.split()[0])
@@ -24,12 +24,18 @@ for item in diffs[:show]:
 
 Type = [index for index, value in enumerate(Pizza_slices) if value in Item_List]
 
+First = str(Item_List.__len__())
 
-First = Item_List.__len__()
-O = open("Output.in", "w")
-line_O1 = O.writelines(str(First))
-line_O2 = O.writelines(str(Type))
+line_02 = (' '.join(map(str, Type)))
 
-O = open("Output.in", "r")
+O = open("output.in", "w")
+O.writelines(First)
+O.writelines('\n')
+O.writelines(line_02)
+O.close()
+
+
+O = open("output.in", "r")
 print(O.readline())
-print(O.readline())
+O.close()
+
