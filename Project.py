@@ -35,7 +35,4 @@ O.writelines(line_02)
 O.close()
 
 
-O = open("output.in", "r")
-print(O.readline())
-O.close()
 
